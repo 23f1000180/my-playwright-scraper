@@ -1,0 +1,21 @@
+name: QA Tables
+on: [push]
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm i playwright
+      - run: npx playwright install --with-deps
+      - name: "QA Sum for 23f1000180@ds.study.iitm.ac.in"
+        run: node scrape.js
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: debug-screenshots
+          path: debug-*.png
