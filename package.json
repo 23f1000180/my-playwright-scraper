@@ -1,1 +1,24 @@
-
+{
+  "name": "my-playwright-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scrape.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/23f1000180/my-playwright-scraper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/23f1000180/my-playwright-scraper/issues"
+  },
+  "homepage": "https://github.com/23f1000180/my-playwright-scraper#readme",
+  "dependencies": {
+    "playwright": "^1.58.2"
+  }
+}
